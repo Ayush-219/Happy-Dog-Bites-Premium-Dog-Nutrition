@@ -100,15 +100,19 @@ Search for `btn-primary` in `index.html` and update the link text and `href="#"`
 
 ## 🖼️ Image Sources
 
-Current placeholder images are from [Unsplash](https://unsplash.com) (free to use). Replace them with your actual product photos for production use.
+> ⚠️ **No images are stored in this repository or bundled in the code.**
+> All images are loaded at runtime via external **Unsplash URLs** directly inside `index.html`.
 
-To download the placeholders:
-1. Copy the `src` URL from any `<img>` tag in `index.html`
-2. Paste into your browser → right-click → **Save image as**
-3. Place in your `images/` folder and update the `src`
+### How images work in this project
 
----
+The `<img>` tags in `index.html` point to remote Unsplash URLs, for example:
 
-## 📄 License
+```html
+<food.png" alt="..." />
+```
 
-This project is for internal/client use. All copy and brand assets belong to **Happy Dog Bites**. Placeholder images are from Unsplash and subject to the [Unsplash License](https://unsplash.com/license).
+This means:
+- ✅ No image files need to be downloaded to run the page
+- ✅ Images load automatically as long as you have an internet connection
+- ❌ Images will **not** load if you are offline
+
